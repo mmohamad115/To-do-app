@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taakbeheer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/vrcafe-logo.png" alt="VRcafe Logo" id="vrcafe-logo">
+        <h1>Taakbeheer</h1>
+    </header>
+    <main>
+        <form id="add-task-form">
+            <input type="text" id="task-name" placeholder="Taaknaam" required>
+            <select id="task-category">
+                <option value="Werk">Werk</option>
+                <option value="Persoonlijk">Persoonlijk</option>
+                <option value="Vrije tijd">Vrije tijd</option>
+            </select>
+            <button type="submit">Taak toevoegen</button>
+        </form>
+        <section id="categories">
+            <div id="category-werk">
+                <h3>Werk</h3>
+                <ul class="task-list"></ul>
+            </div>
+            <div id="category-persoonlijk">
+                <h3>Persoonlijk</h3>
+                <ul class="task-list"></ul>
+            </div>
+            <div id="category-vrijetijd">
+                <h3>Vrije tijd</h3>
+                <ul class="task-list"></ul>
+            </div>
+        </section>
+    </main>
+    <script src="/js/script.js"></script>
+</body>
+
+</html>

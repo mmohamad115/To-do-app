@@ -1,0 +1,223 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: black;
+    color: #333;
+    line-height: 1.6;
+    padding: 0;
+}
+
+
+header {
+    background-color: #630F8E;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    border-bottom: 4px solid #36F2AA;
+
+}
+
+#vrcafe-logo {
+    width: 120px;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+
+main {
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+input,
+select,
+button {
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input[type="text"],
+select {
+    width: 250px;
+}
+
+button {
+    background-color: #36F2AA;
+
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e07b00;
+
+}
+
+
+#categories {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#categories div {
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    width: calc(33.333% - 20px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#categories div:hover {
+    transform: translateY(-10px);
+
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: grab;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li:hover {
+    background-color: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.task-list li span {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.task-list li button {
+    margin-top: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-list li:hover {
+    background-color: #f1f1f1;
+}
+
+button.complete-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button.delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+button.complete-btn:hover,
+button.delete-btn:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+
+.task-list li div {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+
+@media (max-width: 768px) {
+
+
+    #categories {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #categories div {
+        width: 80%;
+    }
+
+    input[type="text"],
+    select {
+        width: 100%;
+    }
+
+
+    .task-list li div {
+        flex-direction: column;
+
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px;
+    }
+
+    #vrcafe-logo {
+        width: 100px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    #categories div {
+        width: 100%;
+    }
+
+
+    .task-list li div {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.empty-message {
+    font-style: italic;
+    color: #999;
+    text-align: center;
+    padding: 10px;
+}
